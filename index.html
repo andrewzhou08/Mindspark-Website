@@ -24,7 +24,96 @@
                 background-color: #dcdfdf;
             }
             
+            .section {
+                background-color: #fff;
+                border-radius: 20px;
+                width: 95%;
+                margin: 0 auto;
+            }
             
+            
+            
+            /* The Modal (background) */
+            
+            .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            }
+
+            /* Modal Content/Box */
+            .modal-content {
+                background-color: #fefefe;
+                margin: 15% auto; /* 15% from the top and centered */
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%; /* Could be more or less, depending on screen size */
+            }
+
+            /* The Close Button */
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            
+            #email {
+                height:35px;
+                width:50%;
+                position:relative;
+                top:-5px;
+                left:10px;
+                border-radius:5px;
+                border:1px solid gray;
+            }
+            
+            #submit-button {
+                color:#10595b;
+                background-color:#fff;
+                border: 1px solid #10595b;
+                border-radius:5px;
+                height:35px;
+                width:100px;
+                position:relative;
+                top:-5px;
+                left:10px;
+            }
+            
+            #submit-button:hover {
+                color:#fff;
+                background-color: #10595b;
+            }
+            
+            #error-message {
+                color:red;
+                text-align:center;
+                font-size: 24px;
+            }
+            
+            #success-message {
+                color:green;
+                text-align:center;
+                font-size: 24px;
+            }
+            
+            
+            
+            /*TOP HEADER*/
             
             #topbar-logo {
                 width:200px;
@@ -47,6 +136,14 @@
             h1, h2, h3, h4, h5, h6, p, a, span {
                 color: #b4e1e5;
                 font-family: Rex;
+            }
+            
+            .dark {
+                color:#10595b;
+            }
+            
+            .darker {
+                color:#024747;
             }
             
             .topbar-link {
@@ -80,18 +177,99 @@
             }
             
             .btn-learnmore:hover {
-                color:#cccccc;
-                border: 1px solid #cccccc;
+                color:#ffffff;
                 background-color: #10595b;
             }
             
             .btn-learnmore:active {
-                color:#10595b;
+                color:#fff;
                 border: 1px solid #10595b;
+            }
+            
+            
+            
+            /*INTRO*/
+            
+            .intro-box {
+                background-color: #eaeaea;
+                border-radius:10px;
+                width: 30%;
+                margin: 1.6%;
+            }
+            
+            .intro-title {
+                text-align:center;
+                padding-top:12px;
+            }
+            
+            .intro-box {
+                
+            }
+            
+            #intro-wd-text {
+                color:#5bc5c3;
+            }
+            
+            #intro-java-text {
+                color:#f6be42;
+            }
+            
+            #intro-ios-text {
+                color:#6bbe4d;
+            }
+            
+            #intro-wd {
+                border: 1px solid #5bc5c3;
+                border-bottom: 3px solid #5bc5c3;
+            }
+            
+            #intro-java {
+                border: 1px solid #f6be42;
+                border-bottom: 3px solid #f6be42;
+            }
+            
+            #intro-ios {
+                border: 1px solid #6bbe4d;
+                border-bottom: 3px solid #6bbe4d;
+            }
+            
+            .intro-info {
+                color:gray;
+                text-align:center;
+                font-size: 14px;
+                position:relative;
+                top:-7px;
+            }
+            
+            .intro-p {
+                color:black;
+                font-size: 16px;
             }
         </style>
     </head>
     <body>
+        
+        
+        
+        <!--MODAL-->
+        
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">x</span>
+                <h1 class="dark">Interested?</h1>
+                <hr/>
+                <h3 class="darker" style="float:left;">Add your email for updates: </h3>
+                <input type="text" name="email" id="email">
+                <input type="submit" id="submit-button" value="Sign Up"/>
+                <p id="error-message">Submission Failed!</p>
+                <p id="success-message">Success!</p>
+            </div>
+
+        </div>
+        
+        
+        
+        <!--TOP BAR-->
         
         <div class="container">
             <div class="col-sm-12">
@@ -116,6 +294,10 @@
             </div>
         </div>
         
+        
+        
+        <!--JUMBOTRON-->
+        
         <div class="body">
             <!--<div class="jumbotron">
                 <h1 class="display-3">hello world</h1>
@@ -126,13 +308,42 @@
                     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
                 </p>
                 -->
-                <div class="jumbotron" style="background-image: url('images/bg.jpg'); background-size: 100%;height:500px;">
+                <div class="jumbotron" style="background-image: url('images/bg.png'); background-size: 100%;height:500px;">
                     <div class="container for-about">
                         <h1 style="color:#10595b;float:right;position:relative;top:100px;"><img src="images/quotes.png" style="height:30px;position:relative;top:-10px;"/>very challenging<br/> and engaging.<br/><a class="btn btn-learnmore" href="#" role="button">learn more</a></h1>
                     </div>
                 </div>
             
             
+            
+            <!--INTRO-->
+            
+            <div class="section" style="position:relative;top:-100px;padding-bottom:30px;">
+                <h1 class="dark" style="font-size:72px;text-align:center;position:relative;top:30px;">Want to learn how to code?</h1>
+                <h2 class="darker" style="float:right;position:relative;top:20px;right:100px;font-size:48px;">- We've got you covered.<br/></h2>
+                <div class="container" style="margin-top:100px;padding-left:7px;padding-right:7px;">
+                    <div class="row gutter-10">
+                        <div class="col-md-4 intro-box" id="intro-wd">
+                            <h3 class="intro-title" id="intro-wd-text">website development</h3>
+                            <h6 class="intro-info">1-2 weeks&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;beginner-intermediate</h6>
+                            <p class="intro-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <a class="btn btn-learnmore" href="#" role="button" style="position:relative;top:-10px;left:50%;">learn more</a>
+                        </div>
+                        <div class="col-md-4 intro-box" id="intro-java">
+                            <h3 class="intro-title" id="intro-java-text">introduction to java</h3>
+                            <h6 class="intro-info">1 week&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;beginner</h6>
+                            <p class="intro-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <a class="btn btn-learnmore" href="#" role="button" style="position:relative;top:-10px;left:50%;">learn more</a>
+                        </div>
+                        <div class="col-md-4 intro-box" id="intro-ios">
+                            <h3 class="intro-title" id="intro-ios-text">ios development</h3>
+                            <h6 class="intro-info">1 week&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;intermediate</h6>
+                            <p class="intro-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <a class="btn btn-learnmore" href="#" role="button" style="position:relative;top:-10px;left:50%;">learn more</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
             
             
             
@@ -149,11 +360,49 @@
         
         
         <script type="text/javascript">
-            $(".topbar-link").hover(function() {
-                
-            }, function() {
-                
+            // Get the modal
+            var modal = document.getElementById('myModal');
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the button, open the modal 
+                modal.style.display = "block";
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            
+            
+            
+            //Email verification
+            $("#success-message").hide();
+            $("#error-message").hide();
+            
+            $("#submit-button").click(function() {
+                if(!isEmail($("#email").val())) {
+                    $("#error-message").show();
+                    $("#success-message").hide();
+                    $("#email").css("border","3px solid red");
+                } else {
+                    $("#success-message").show();
+                    $("#error-message").hide();
+                    $("#email").css("border","1px solid gray");
+                }
             });
+            
+            function isEmail(email) {
+                var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                return regex.test(email);
+            }
         </script>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
