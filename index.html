@@ -83,7 +83,7 @@
                 cursor: pointer;
             }
             
-            #email {
+            #email, #email-bottom {
                 height:35px;
                 width:50%;
                 position:relative;
@@ -93,7 +93,7 @@
                 border:1px solid gray;
             }
             
-            #submit-button {
+            #submit-button, #submit-button-bottom {
                 color:#10595b;
                 background-color:#fff;
                 border: 1px solid #10595b;
@@ -105,18 +105,18 @@
                 left:10px;
             }
             
-            #submit-button:hover {
+            #submit-button:hover, #submit-button-bottom:hover {
                 color:#fff;
                 background-color: #10595b;
             }
             
-            #error-message {
+            #error-message, #error-message-bottom {
                 color:red;
                 text-align:center;
                 font-size: 24px;
             }
             
-            #success-message {
+            #success-message, #success-message-bottom {
                 color:green;
                 text-align:center;
                 font-size: 24px;
@@ -195,8 +195,23 @@
             }
             
             .btn-learnmore:active {
-                color:#fff;
+                color:#ffffff;
                 border: 1px solid #10595b;
+            }
+            
+            .btn-emailus {
+                color: #b5e1e3;
+                border: 1px solid #b5e1e3;
+            }
+            
+            .btn-emailus:hover {
+                color:#ffffff;
+                background-color: #b5e1e3;
+            }
+            
+            btn-emailus:active {
+                color:#ffffff;
+                border: 1px solid #b5e1e3;
             }
             
             
@@ -258,6 +273,38 @@
                 color:black;
                 font-size: 16px;
             }
+            
+            
+            
+            
+            /*INSTRUCTORS*/
+            
+            .inst-img {
+                border-radius:10px;
+                border: 1px solid #10595b;
+            }
+            
+            
+            
+            /*CONTACT*/
+            
+            #contact {
+                position:relative;
+                top:30px;
+                z-index: 0;
+            }
+            
+            
+            
+            /*FOOTER*/
+            
+            #footer {
+                width: 100%;
+                background-color: #064242;
+                height:220px;
+                z-index: 10;
+                position:absolute;
+            }
         </style>
     </head>
     <body>
@@ -312,15 +359,6 @@
         <!--JUMBOTRON-->
         
         <div class="body">
-            <!--<div class="jumbotron">
-                <h1 class="display-3">hello world</h1>
-                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                <hr class="m-y-2">
-                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                <p class="lead">
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-                </p>
-                -->
                 <div class="jumbotron" style="background-image: url('images/bg.png'); background-size: 100%;height:500px;">
                     <div class="container for-about">
                         <h1 style="color:#10595b;float:right;position:relative;top:100px;"><img src="images/quotes.png" style="height:30px;position:relative;top:-10px;"/>very challenging<br/> and engaging.<br/><a class="btn btn-learnmore" href="#" role="button">learn more</a></h1>
@@ -382,9 +420,79 @@
             
             
             
+            <!--INSTRUCTORS-->
+            
+            <div class="section" style="position:relative;padding-bottom:30px;">
+                <h1 class="dark" style="font-size:72px;position:relative;top:30px;left:10%;">Meet the instructors.</h1>
+                <div class="row" style="margin-top:80px;margin-left:50px;">
+                    <div class="col-md-5">
+                        <img class="inst-img" src="images/andrewzhou.png"/>
+                    </div>
+                    <div class="col-md-6">
+                        <p style="font-size:20px;margin-right:30px;margin-left:20px;color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit involuptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollitanim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                    </div>
+                </div>
+                
+                <div class="row" style="margin-top:80px;margin-left:50px;">
+                    <div class="col-lg-6">
+                        <p style="font-size:20px;color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit involuptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollitanim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                    </div>
+                    <div class="col-lg-5">
+                        <img class="inst-img" src="images/bg.png" style="width:480px;height:360px;margin-right:30px;"/>
+                    </div>
+                </div>
+                
+                <div class="row" style="margin-top:80px;margin-left:50px;">
+                    <div class="col-md-5">
+                        <img class="inst-img" src="images/bg.png" style="width:480px;height:360px;margin-right:30px;"/>
+                    </div>
+                    <div class="col-md-6">
+                        <p style="font-size:20px;margin-right:30px;margin-left:20px;color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit involuptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollitanim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                    </div>
+                </div>
+            </div>
             
             
             
+            <!--Contact-->
+            
+            <div class="section" id="contact" style="padding-bottom:300px;margin-top:20px;">
+                <h1 class="dark" style="font-size:72px;text-align:center;position:relative;top:30px;">Interested?</h1>
+                <div style="margin-top:50px;margin-left:20px;">
+                    <h3 class="darker" style="float:left;margin-left:10px;font-size:40px;">Join our mailing list for updates.</h3>
+                    <input type="text" name="email" id="email-bottom" style="width:80%;">
+                    <input type="submit" id="submit-button-bottom" value="Sign Up" style="width:10%;"/>
+                    <p id="error-message-bottom">Submission Failed!</p>
+                    <p id="success-message-bottom">Success!</p>
+                    <hr style="width:80%;position:relative;right:20px;"/>
+                </div>
+                
+                <div>
+                    <h3 class="darker" style="float:left;margin-left:30px;font-size:40px;">View our courses to find what's right for you.<br/><a class="btn btn-learnmore" href="#" role="button" style="margin-bottom:25px;">learn more</a></h3>
+                </div>
+                
+                <div>
+                    <h3 class="darker" style="float:left;margin-left:30px;font-size:40px;">Sign up for the courses you're interested in.<br/><a class="btn btn-learnmore" href="#" role="button" style="margin-bottom:25px;">sign up</a></h3>
+                </div>
+                
+            </div>
+            
+            
+            
+            
+            <!--Footer-->
+            <div id="footer">
+                <img id="topbar-logo" src="images/logo.png" style="position:relative;top:40px;left:30px;"/>
+                <h3 style="float:right;position:relative;top:40px;right:50px;">Questions? hello@mindsparksummer.com<br/><a class="btn btn-emailus" href="#" role="button" style="position:relative;left:40px;">email us</a></h3>
+                
+                <p style="color:#115655;position:relative;top:90px;left:30px;">©2015-16 Mindspark Summer Program. All rights reserved.</p>
+            </div>
             
             
             
@@ -433,6 +541,22 @@
                     setTimeout(function() {
                         modal.style.display = "none";
                     }, 1000);
+                }
+            });
+            
+            //Email verification bottom
+            $("#success-message-bottom").hide();
+            $("#error-message-bottom").hide();
+            
+            $("#submit-button-bottom").click(function() {
+                if(!isEmail($("#email-bottom").val())) {
+                    $("#error-message-bottom").show();
+                    $("#success-message-bottom").hide();
+                    $("#email-bottom").css("border","3px solid red");
+                } else {
+                    $("#success-message-bottom").show();
+                    $("#error-message-bottom").hide();
+                    $("#email-bottom").css("border","3px solid green");
                 }
             });
             
