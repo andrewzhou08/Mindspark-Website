@@ -172,6 +172,15 @@
                 padding-top: 20px;
             }
             
+            .topbar-link-hidden {
+                color: #b4e1e5;
+                font-family: Rex, sans-serif;
+                font-size: 32px;
+                position:relative;
+                top:5px;
+                padding-top: 20px;
+            }
+            
             .nav-link {
                 color: #b4e1e5;
             }
@@ -216,6 +225,29 @@
             btn-emailus:active {
                 color:#ffffff;
                 border: 1px solid #b5e1e3;
+            }
+            
+            
+            
+            
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                padding: 12px 16px;
+                z-index: 1;
+                right:0;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
             }
             
             
@@ -354,6 +386,17 @@
                         <li class="nav-item">
                             <a class="nav-link topbar-link" id="topbar-login" href="#">login</a>
                         </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <span><img src="images/menu-icon.png" height="60px";/></span>
+                                <div class="dropdown-content" style="background-color:#10595B;">
+                                    <a class="nav-link topbar-link-hidden" id="topbar-home" href="#" style="float:right;">home</a>
+                                    <a class="nav-link topbar-link-hidden" id="topbar-about" href="#" style="float:right;">about</a>
+                                    <a class="nav-link topbar-link-hidden" id="topbar-courses" href="#" style="float:right;">courses</a>
+                                    <a class="nav-link topbar-link-hidden" id="topbar-login" href="#" style="float:right;">login</a>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
 
                 </nav>
@@ -376,28 +419,16 @@
             <!--INTRO-->
             
             <div class="section" style="position:relative;top:-100px;padding-bottom:30px;">
+                
                 <h1 class="dark title" style="font-size:72px;text-align:center;position:relative;top:30px;">want to learn how to code?</h1>
                 <h2 class="darker subtitle" style="float:right;position:relative;top:20px;right:100px;font-size:48px;">- We've got you covered.<br/></h2>
-                <div class="container" style="margin-top:100px;padding-left:7px;padding-right:7px;">
-                    <div class="row gutter-10">
-                        <div class="col-md-4 intro-box" id="intro-wd">
-                            <h3 class="intro-title" id="intro-wd-text">website development</h3>
-                            <h6 class="intro-info">1-2 weeks&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;beginner-intermediate</h6>
-                            <p class="intro-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <a class="btn btn-learnmore" href="#" role="button" style="position:relative;top:-10px;left:50%;">learn more</a>
-                        </div>
-                        <div class="col-md-4 intro-box" id="intro-java">
-                            <h3 class="intro-title" id="intro-java-text">introduction to java</h3>
-                            <h6 class="intro-info">1 week&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;beginner</h6>
-                            <p class="intro-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <a class="btn btn-learnmore" href="#" role="button" style="position:relative;top:-10px;left:50%;">learn more</a>
-                        </div>
-                        <div class="col-md-4 intro-box" id="intro-ios">
-                            <h3 class="intro-title" id="intro-ios-text">ios development</h3>
-                            <h6 class="intro-info">1 week&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;intermediate</h6>
-                            <p class="intro-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <a class="btn btn-learnmore" href="#" role="button" style="position:relative;top:-10px;left:50%;">learn more</a>
-                            </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="images/bg.png" style="float:right;width:40%;margin-right:10%;margin-top:40px;margin-left:5%;"/>
+                        <p class="info-text" style="position:relative;top:40px;left:10px;font-size:20px;margin-left:5%;margin-right:5%;color:black;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mindspark was created because learning to code <b>isn’t as fun as it’s meant to be.</b> Students are often times bogged down with hours’ worth of boring lectures, repetitive exercises, and confusing bugs. Learning to code shouldn’t be a gruesome task - it should be just as fun as doing!<br/><br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is why Mindspark exists. When anonymously surveyed, students of 2015’s Mindspark Robotics course said they thought the course was fun and engaging. On average, 2015’s Mindspark students rated the course an average of 9/10.<br/><br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This year, we are reinventing the formula and making it better. Our curriculum is much more <b>hands-on.</b> Rather than spending a majority of class lecturing, instructors will assist the students in <b>building.</b> Our instructors are also young, making them more <b>relatable.</b> 2015’s students claimed younger students were more “exciting”. Finally, Mindspark instructors will guarantee your summer is <b>memorable.</b> We go great lengths to make sure every individual camper is satisfied with their experience.<br/><br/>
+                            <b style="font-size:160%;text-align:center;">BECAUSE, AT MINDSPARK, WE DON'T LEARN BY FOLLOWING. <ins>WE LEARN BY DOING</ins>.</b></p>
                     </div>
                 </div>
             </div>
@@ -409,13 +440,26 @@
             <div class="section" style="position:relative;top:-50px;padding-bottom:30px;">
                 <h1 class="dark title" style="font-size:72px;position:relative;top:30px;text-align:center;">Welcome to mindspark.</h1>
                 <h2 class="darker subtitle" style="float:right;position:relative;top:20px;right:10%;font-size:48px;">Unique. Memorable. Hands-On.</h2>
-                <div class="row">
-                    <div class="col-md-12">
-                        <img src="images/bg.png" style="float:right;width:40%;margin-right:10%;margin-top:40px;margin-left:5%;"/>
-                        <p class="info-text" style="position:relative;top:40px;left:10px;font-size:20px;margin-left:5%;margin-right:5%;color:black;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mindspark was created because learning to code <b>isn’t as fun as it’s meant to be.</b> Students are often times bogged down with hours’ worth of boring lectures, repetitive exercises, and confusing bugs. Learning to code shouldn’t be a gruesome task - it should be just as fun as doing!<br/><br/>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is why Mindspark exists. When anonymously surveyed, students of 2015’s Mindspark Robotics course said they thought the course was fun and engaging. On average, 2015’s Mindspark students rated the course an average of 9/10.<br/><br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This year, we are reinventing the formula and making it better. Our curriculum is much more <b>hands-on.</b> Rather than spending a majority of class lecturing, instructors will assist the students in <b>building.</b> Our instructors are also young, making them more <b>relatable.</b> 2015’s students claimed younger students were more “exciting”. Finally, Mindspark instructors will guarantee your summer is <b>memorable.</b> We go great lengths to make sure every individual camper is satisfied with their experience.<br/><br/>
-                            <b style="font-size:160%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BECAUSE, AT MINDSPARK, WE DON'T LEARN BY FOLLOWING. <ins>WE LEARN BY DOING</ins>.</b></p>
+                <div class="container" style="margin-top:100px;padding-left:7px;padding-right:7px;">
+                    <div class="row gutter-10">
+                        <div class="col-md-4 intro-box" id="intro-wd">
+                            <h3 class="intro-title" id="intro-wd-text">website development</h3>
+                            <h6 class="intro-info">1-2 weeks&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;beginner-intermediate</h6>
+                            <p class="intro-p">We offer two website development courses - a beginner course and an intermediate one. Beginners will dive into the fundamentals of good website design, responsive design, and interactivity. Students will leave the class with a well-designed responsive website, among other projects. More advanced students will learn back-end development, design skills, and animations. Advanced students will have completed multiple challenging projects and a fully functional website.</p>
+                            <a class="btn btn-learnmore" href="#" role="button" style="position:relative;top:-10px;left:50%;">learn more</a>
+                        </div>
+                        <div class="col-md-4 intro-box" id="intro-java">
+                            <h3 class="intro-title" id="intro-java-text">java fundamentals</h3>
+                            <h6 class="intro-info">1 week&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;beginner</h6>
+                            <p class="intro-p">At Mindspark, we believe students should have a strong understanding of Object Oriented Programming. Therefore, students taking the Java Fundamentals course will not only learn basic syntax, but also important concepts used in everyday programming. At the end of the course, students will be able to write complicated programs, dive into difficult object-oriented programming-related studies, and understand the fundamental concepts of computer programming.</p>
+                            <a class="btn btn-learnmore" href="#" role="button" style="position:relative;top:-10px;left:50%;">learn more</a>
+                        </div>
+                        <div class="col-md-4 intro-box" id="intro-ios">
+                            <h3 class="intro-title" id="intro-ios-text">ios development</h3>
+                            <h6 class="intro-info">1 week&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;intermediate</h6>
+                            <p class="intro-p">The intermediate iOS development course will focus on building applications. This course does not focus on Swift syntax, but rather on the process of building an iOS application. Students will spend a few days on Swift syntax and language concepts, and the rest of the time will be dedicated to learning to build! Students will learn about the process of building an application and application interface design, and by the end, will have completed a basic tip calculator.</p>
+                            <a class="btn btn-learnmore" href="#" role="button" style="position:relative;top:-10px;left:50%;">learn more</a>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -432,9 +476,7 @@
                     </div>
                     <div class="col-md-6">
                         <h1 class="darker">Andrew Zhou</h1>
-                        <p style="font-size:20px;margin-right:30px;margin-left:20px;color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit involuptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollitanim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                        <p style="font-size:20px;margin-right:30px;margin-left:20px;color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Andrew is a current high school Junior. He has three years of programming experience and two combined years of Swift and Website Development experience. He has created many applications, including an iOS game, which you can find <a href="https://itunes.apple.com/us/app/surreality/id1143571184?ls=1&mt=8" class="dark">here</a>. Andrew has also been teaching programming and robotics in four different organizations and companies for two and a half years. He is the founder and CEO of Mindspark.</p>
                     </div>
                 </div>
                 
@@ -493,10 +535,10 @@
             
             <!--Footer-->
             <div id="footer">
-                <img id="topbar-logo" src="images/logo.png" style="position:relative;top:40px;margin-left:30px;"/>
-                <h3 style="float:right;position:relative;top:40px;right:50px;">Questions? hello@mindsparksummer.com<br/><a class="btn btn-emailus" href="#" role="button" style="position:relative;">email us</a></h3>
+                <img class="footer-logo" id="topbar-logo" src="images/logo.png" style="position:absolute;top:40px;margin-left:30px;"/>
+                <h3 id="footer-contact" style="float:right;position:relative;top:40px;right:50px;">Questions? hello@mindsparksummer.com<br/><a class="btn btn-emailus" href="#" role="button">email us</a></h3>
                 
-                <p style="color:#115655;position:relative;top:90px;margin-left:30px;">©2015-16 Mindspark Summer Program. All rights reserved.</p>
+                <p style="color:#115655;margin-top:150px;margin-left:30px;">©2015-16 Mindspark Summer Program. All rights reserved.</p>
             </div>
             
             
@@ -609,14 +651,32 @@
                     $(".contact-text").css("font-size", "40px");
                 }
                 
-                if(width < 715) {
+                if(width < 750) {
                     $(".topbar-link").hide();
+                    $(".dropdown").show();
                     //TODO: Menu bar
                 } else {
                     $(".topbar-link").show();
+                    $(".dropdown").hide();
                 }
                 
+                if(width <= 850) {
+                    $(".footer-logo").hide();
+                } else {
+                    $(".footer-logo").show();
+                }
+                
+                if(width < 500) {
+                    $("#topbar-logo").css("width","200");
+                    $("#topbar-logo").css("margin-top","12px");
+                } else {
+                    $("#topbar-logo").css("width","300");
+                    $("#topbar-logo").css("margin-top","0px");
+                }
+                
+                
                 $(".jumbotron").css("height", width/3);
+                $("#footer-contact").css("font-size",12+width/64);
             }
         </script>
         
