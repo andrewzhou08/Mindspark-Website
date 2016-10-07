@@ -85,6 +85,34 @@
                  border: 1px solid gray;
              }
              
+             #login-field {
+                 height: 50px;
+                 width: 70%;
+                 border: none;
+                 border-bottom: 2px solid lightgray;
+                 display: block;
+                 margin: auto;
+             }
+             
+             #login-submit {
+                 color: #10595b;
+                 background-color: #fff;
+                 border: none;
+                 border-bottom: 2px solid #10595b;
+                 border-radius: 5px;
+                 height: 50px;
+                 width: 70%;
+                 display: block;
+                 margin: 0 auto;
+                 margin-top: 20px;
+                 -webkit-transition-duration: 0.6s;
+             }
+             
+             #login-submit:hover {
+                 color: #fff;
+                 background-color: #10595b;
+             }
+             
              #submit-button,
              #submit-button-bottom {
                  color: #10595b;
@@ -334,5 +362,90 @@
              
              .course-info {
                  font-size: 24px;
-                 color:black;
+                 color: black;
+             }
+             
+             input[type=text],
+             textarea {
+                 -webkit-transition: all 0.30s ease-in-out;
+                 -moz-transition: all 0.30s ease-in-out;
+                 -ms-transition: all 0.30s ease-in-out;
+                 -o-transition: all 0.30s ease-in-out;
+                 outline: none;
+                 padding: 3px 0px 3px 3px;
+                 margin: 5px 1px 3px 0px;
+                 border: 1px solid #DDDDDD;
+             }
+             
+             input[type=text]:focus,
+             textarea:focus {
+                 box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+                 padding: 3px 0px 3px 3px;
+                 margin: 5px 1px 3px 0px;
+                 border: 1px solid rgba(81, 203, 238, 1);
+             }
+             
+             input[type=password],
+             textarea {
+                 -webkit-transition: all 0.30s ease-in-out;
+                 -moz-transition: all 0.30s ease-in-out;
+                 -ms-transition: all 0.30s ease-in-out;
+                 -o-transition: all 0.30s ease-in-out;
+                 outline: none;
+                 padding: 3px 0px 3px 3px;
+                 margin: 5px 1px 3px 0px;
+                 border: 1px solid #DDDDDD;
+             }
+             
+             input[type=password]:focus,
+             textarea:focus {
+                 box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+                 padding: 3px 0px 3px 3px;
+                 margin: 5px 1px 3px 0px;
+                 border: 1px solid rgba(81, 203, 238, 1);
+             }
+             
+             .dashboard-sidebar {
+                 background-color: #10595B;
+                 float: left;
+                 width: 175px;
+                 position: fixed;
+                 left: -10px;
+                 top: 120px;
+                 height: 600px;
+                 border-radius: 10px;
+             }
+             
+             #dashboard-sidebar-title {
+                 margin: 20px;
+                 margin-top: 40px;
+                 margin-bottom: 30px;
+                 font-size: 48px;
+                 color: #a6d7db;
+                 border-bottom: 5px solid #a6d7db;
+                 padding-bottom: 10px;
+             }
+             
+             #dashboard-sidebar-link {
+                 margin: 20px;
+                 font-size: 32px;
+                 text-decoration: none;
+                 margin-top: 5px;
+                 margin-bottom: 5px;
+             }
+             
+             .dashboard-sidebar-linkdiv {
+                 background-color: #10595B;
+             }
+             
+             #dashboard-sidebar-link:hover {
+                 color: #c5eaed;
+             }
+             
+             #dashboard-sidebar-link:active {
+                 color: #c5eaed;
+             }
+             
+             #dashboard-sidebar-link:visited {
+                 color: #b4e1e5;
              }
