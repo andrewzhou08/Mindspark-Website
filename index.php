@@ -1,0 +1,257 @@
+<?php
+    session_start();
+
+
+
+    $link = mysqli_connect("localhost","cl20-emails","msr1517emails","cl20-emails");
+    
+    if(mysqli_connect_error()) {
+        die ("There was an error connecting to the database.");
+    }
+
+    if(array_key_exists('email', $_POST)) {
+        if($_POST['email'] == '') {
+            
+        } else {
+            $query = "INSERT INTO `emails` (`email`) VALUES('".mysqli_real_escape_string($link, $_POST['email'])."')";
+            $result = mysqli_query($link, $query);
+            $_SESSION['entered'] = true;
+        }
+}
+?>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+        <title>Mindspark Summer!</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
+
+        <script src="jquery-3.1.0.min.js"></script>
+
+        <link type="text/css" rel="stylesheet" href="stylesheet.css" />
+    </head>
+
+    <body>
+
+
+
+        <!--MODAL-->
+        
+        <div id="myModal" class="modal" <?php
+                    echo 'style="display:none;"';
+            ?>>
+            <div class="modal-content">
+                <span class="close">x</span>
+                <h1 class="dark">Interested?</h1>
+                <hr/>
+                <h3 class="darker" style="float:left;">Add your email for updates: </h3>
+                <form method="post">
+                    <input type="text" name="email" id="email">
+                    <input type="submit" id="submit-button" value="Sign Up" />
+                </form>
+                <p id="error-message">Submission Failed!</p>
+                <p id="success-message">Success!</p>
+            </div>
+
+        </div>
+
+
+
+        <!--TOP BAR-->
+
+        <div>
+            <div class="col-sm-12">
+                <nav class="navbar navbar-fixed-top navbar-nav navbar-light bg-faded" style="height:90px;border-top:10px solid #0e4342;">
+                    <a class="navbar-brand" href="index.php"><img id="topbar-logo" src="images/logo.png" /></a>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link topbar-link" id="topbar-home" href="index.php">home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link topbar-link" id="topbar-about" href="about.html">about</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link topbar-link" id="topbar-courses" href="courses.html">courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link topbar-link" id="topbar-login" href="login.php">login</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <span><img src="images/menu-icon.png" height="60px";/></span>
+                                <div class="dropdown-content" style="background-color:#10595B;">
+                                    <a class="nav-link topbar-link-hidden" id="topbar-home" href="index.php" style="float:right;">home</a>
+                                    <a class="nav-link topbar-link-hidden" id="topbar-about" href="about.html" style="float:right;">about</a>
+                                    <a class="nav-link topbar-link-hidden" id="topbar-courses" href="courses.html" style="float:right;">courses</a>
+                                    <a class="nav-link topbar-link-hidden" id="topbar-login" href="login.php" style="float:right;">login</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+        </div>
+
+
+
+        <!--JUMBOTRON    background-image: url('images/bg.png');-->
+
+        <div class="body">
+            <div class="jumbotron" style="background-image: url('images/jumbotron.png'); background-color:#B4E1E5; background-size: 100%;height:500px;">
+                <div class="container for-about">
+                    <h1 style="color:#10595b;float:right;position:relative;top:100px;"><img src="images/quotes.png" style="height:30px;position:relative;top:-10px;" />very challenging<br/> and engaging.<br/><a class="btn btn-learnmore" href="#" role="button">learn more</a></h1>
+                </div>
+            </div>
+
+
+
+            <!--INTRO-->
+
+            <div class="section" style="position:relative;top:-100px;padding-bottom:30px;">
+
+                <h1 class="dark title" style="font-size:72px;text-align:center;position:relative;top:30px;">want to learn how to code?</h1>
+                <h2 class="darker subtitle" style="float:right;position:relative;top:20px;right:100px;font-size:48px;">- We've got you covered.<br/></h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="images/intro2.png" style="float:right;width:40%;margin-right:10%;margin-top:40px;margin-left:5%;" />
+                        <p class="info-text" style="position:relative;top:40px;left:10px;font-size:20px;margin-left:5%;margin-right:5%;color:black;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mindspark was created because learning to code <b>isn’t as fun as it’s meant to be.</b> Students are often times bogged down with hours’ worth of boring lectures, repetitive exercises, and confusing bugs. Learning to code shouldn’t be a gruesome task - it should be just as fun as doing!<br/><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is why Mindspark exists. When anonymously surveyed, students of 2015’s Mindspark Robotics course said they thought the course was fun and engaging. On average, 2015’s Mindspark students rated the course an average of 9/10.<br/><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This year, we are reinventing the formula and making it better. Our curriculum is much more <b>hands-on.</b> Rather than spending a majority of class lecturing, instructors will assist the students in <b>building.</b> Our instructors are also young, making them more <b>relatable.</b> 2015’s students claimed younger students were more “exciting”. Finally, Mindspark instructors will guarantee your summer is <b>memorable.</b> We go great lengths to make sure every individual camper is satisfied with their experience.<br/><br/>
+                            <b style="font-size:160%;text-align:center;">BECAUSE, AT MINDSPARK, WE DON'T LEARN BY FOLLOWING. <ins>WE LEARN BY DOING</ins>.</b></p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--INFORMATION-->
+
+            <div class="section" style="position:relative;top:-50px;padding-bottom:30px;">
+                <h1 class="dark title" style="font-size:72px;position:relative;top:30px;text-align:center;">Welcome to mindspark.</h1>
+                <h2 class="darker subtitle" style="float:right;position:relative;top:20px;right:10%;font-size:48px;">Unique. Memorable. Hands-On.</h2>
+                <div class="container" style="margin-top:100px;padding-left:7px;padding-right:7px;">
+                    <div class="row gutter-10">
+                        <div class="col-md-4 intro-box" id="intro-wd">
+                            <h3 class="intro-title" id="intro-wd-text">website development</h3>
+                            <h6 class="intro-info">1-2 weeks&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;beginner-intermediate</h6>
+                            <p class="intro-p">We offer two website development courses - a beginner course and an intermediate one. Beginners will dive into the fundamentals of good website design, responsive design, and interactivity. Students will leave the class with a well-designed responsive website, among other projects. More advanced students will learn back-end development, design skills, and animations. Advanced students will have completed multiple challenging projects and a fully functional website.</p>
+                            <a class="btn btn-learnmore" href="#" role="button" style="position:relative;top:-10px;left:50%;">learn more</a>
+                        </div>
+                        <div class="col-md-4 intro-box" id="intro-java">
+                            <h3 class="intro-title" id="intro-java-text">java fundamentals</h3>
+                            <h6 class="intro-info">1 week&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;beginner</h6>
+                            <p class="intro-p">At Mindspark, we believe students should have a strong understanding of Object Oriented Programming. Therefore, students taking the Java Fundamentals course will not only learn basic syntax, but also important concepts used in everyday programming. At the end of the course, students will be able to write complicated programs, dive into difficult object-oriented programming-related studies, and understand the fundamental concepts of computer programming.</p>
+                            <a class="btn btn-learnmore" href="#" role="button" style="position:relative;top:-10px;left:50%;">learn more</a>
+                        </div>
+                        <div class="col-md-4 intro-box" id="intro-ios">
+                            <h3 class="intro-title" id="intro-ios-text">ios development</h3>
+                            <h6 class="intro-info">1 week&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;intermediate</h6>
+                            <p class="intro-p">The intermediate iOS development course will focus on building applications. This course does not focus on Swift syntax, but rather on the process of building an iOS application. Students will spend a few days on Swift syntax and language concepts, and the rest of the time will be dedicated to learning to build! Students will learn about the process of building an application and application interface design, and by the end, will have completed a basic tip calculator.</p>
+                            <a class="btn btn-learnmore" href="#" role="button" style="position:relative;top:-10px;left:50%;">learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--INSTRUCTORS-->
+
+            <div class="section" style="padding-bottom:30px;">
+                <h1 class="dark title" style="font-size:72px;position:relative;top:30px;text-align:center;">Meet the instructors.</h1>
+                <div class="row" style="margin-top:80px;margin-left:50px;">
+                    <div class="col-md-5">
+                        <img class="img-thumbnail" src="images/andrewzhou.png" />
+                    </div>
+                    <div class="col-md-6">
+                        <h1 class="darker">Andrew Zhou</h1>
+                        <p style="font-size:20px;margin-right:30px;margin-left:20px;color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Andrew is a current high school Junior. He has three years of programming experience and two combined years of Swift and Website Development experience. He has created many applications, including an iOS game, which you can find <a href="https://itunes.apple.com/us/app/surreality/id1143571184?ls=1&mt=8" class="dark">here</a>. Andrew has also been teaching programming and robotics in four different organizations and companies for two and a half years. He is the founder and CEO of Mindspark.</p>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top:80px;margin-left:50px;">
+                    <div class="col-md-6">
+                        <h1 class="darker">Leo Yao</h1>
+                        <p style="font-size:20px;color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit involuptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollitanim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                    </div>
+                    <div class="col-md-5">
+                        <img class="img-thumbnail" src="images/bg.png" style="width:480px;height:360px;margin-right:30px;" />
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top:80px;margin-left:50px;">
+                    <div class="col-md-5">
+                        <img class="img-thumbnail" src="images/bg.png" style="width:480px;height:360px;margin-right:30px;" />
+                    </div>
+                    <div class="col-md-6">
+                        <h1 class="darker">Instructor #3</h1>
+                        <p style="font-size:20px;margin-right:30px;margin-left:20px;color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit involuptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollitanim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--Contact-->
+
+            <div class="section" id="contact" style="padding-bottom:300px;margin-top:20px;">
+                <h1 class="dark title" style="font-size:72px;text-align:center;position:relative;top:30px;">Interested?</h1>
+                <div style="margin-top:50px;margin-left:20px;">
+                    <h3 class="darker contact-text" style="float:left;margin-left:10px;font-size:40px;">Join our mailing list for updates.</h3>
+                    <form method="post">
+                        <input type="text" name="email" id="email-bottom" style="width:80%;">
+                        <input type="submit" id="submit-button-bottom" value="Sign Up" style="width:10%;" />
+                    </form>
+                    <p id="error-message-bottom">Submission Failed!</p>
+                    <p id="success-message-bottom">Success!</p>
+                    <hr style="width:80%;margin-right:10%;" />
+                </div>
+
+                <div>
+                    <h3 class="darker contact-text" style="float:left;margin-left:30px;font-size:40px;">View our courses to find what's right for you.<br/><a class="btn btn-learnmore" href="#" role="button" style="margin-bottom:25px;">learn more</a></h3>
+                </div>
+
+                <div>
+                    <h3 class="darker contact-text" style="float:left;margin-left:30px;font-size:40px;">Sign up for the courses you're interested in.<br/><a class="btn btn-learnmore" href="#" role="button" style="margin-bottom:25px;">sign up</a></h3>
+                </div>
+
+            </div>
+
+
+
+
+            <!--Footer-->
+            <div id="footer">
+                <img class="footer-logo" id="topbar-logo" src="images/logo.png" style="position:absolute;top:40px;margin-left:30px;" />
+                <h3 id="footer-contact" style="float:right;position:relative;top:40px;right:50px;">Questions? hello@mindsparksummer.com<br/><a class="btn btn-emailus" href="#" role="button">email us</a></h3>
+
+                <p style="color:#115655;margin-top:150px;margin-left:30px;">©2015-16 Mindspark Summer Program. All rights reserved.</p>
+            </div>
+
+
+
+
+        </div>
+
+
+
+        <script src="script.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+    </body>
+
+    </html>

@@ -1,0 +1,255 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Challenge!</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #EEEEEE;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+<!--
+▒█░░▒█ █░░█ █░░█ 　 █▀▀█ █▀▀█ █▀▀ 　 █░░█ █▀▀█ █░░█ 
+▒█▒█▒█ █▀▀█ █▄▄█ 　 █▄▄█ █▄▄▀ █▀▀ 　 █▄▄█ █░░█ █░░█ 
+▒█▄▀▄█ ▀░░▀ ▄▄▄█ 　 ▀░░▀ ▀░▀▀ ▀▀▀ 　 ▄▄▄█ ▀▀▀▀ ░▀▀▀ 
+
+█░░ █▀▀█ █▀▀█ █░█ ░▀░ █▀▀▄ █▀▀▀ 　 █▀▀█ ▀▀█▀▀ 
+█░░ █░░█ █░░█ █▀▄ ▀█▀ █░░█ █░▀█ 　 █▄▄█ ░░█░░ 
+▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀░▀ ▀▀▀ ▀░░▀ ▀▀▀▀ 　 ▀░░▀ ░░▀░░ 
+
+▀▀█▀▀ █░░█ █▀▀ 　 █▀▀ █▀▀█ █░░█ █▀▀█ █▀▀ █▀▀ 
+░░█░░ █▀▀█ █▀▀ 　 ▀▀█ █░░█ █░░█ █▄▄▀ █░░ █▀▀ 
+░░▀░░ ▀░░▀ ▀▀▀ 　 ▀▀▀ ▀▀▀▀ ░▀▀▀ ▀░▀▀ ▀▀▀ ▀▀▀ 
+
+█▀▀ █▀▀█ █▀▀▄ █▀▀ ▀█ 　 ▄ ▄▀ 
+█░░ █░░█ █░░█ █▀▀ █▀ 　 ░ █░ 
+▀▀▀ ▀▀▀▀ ▀▀▀░ ▀▀▀ ▄░ 　 ▀ ▀▄ 
+
+
+NOTE: I'm using inline CSS. This is VERY frowned upon when building websites, but I'm lazy, so...
+DO NOT USE INLINE CSS. LET ME REPEAT - DO NOT USE INLINE CSS.
+Oh, and also, please do this exercise WITHOUT looking at the source code :(
+-->
+
+
+
+
+    <nav class="navbar navbar-default navbar-inverse">
+        <!--navbar-inverse for inverse, navbar-fixed-top for fixed-->
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <!--Stuff inside the toggle here. -->
+                    <span class="sr-only">Toggle navigation</span>
+                    
+                    <!--The shape of the three bars-->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--^^ Toggle for mobile ^^-->
+
+                <a class="navbar-brand" href="#">Mindspark</a>
+                <!--Replace "Brand" with an img tag to put an img-->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <!--List to put all the navbar stuff in on the left side-->
+                <ul class="nav navbar-nav">
+
+                    <!--Current link-->
+                    <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+
+                    <!--Not current link-->
+                    <li><a href="#">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="badge"> 44 new</span><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+
+                    <!--Add <li>button code with class="navbar-btn"</li>-->
+                    <!--Do above with a p tag and a class of navbar-text for text-->
+                </ul>
+
+                <!--Search bar - forms-->
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <div class="jumbotron" style="padding: 20px; margin-top: -20px;background-image: url('cat.jpg');height:700px;width:100%;">
+        <div class="alert alert-success" role="alert"><b>Sign up now!</b> You have nothing to lose. <a href="#contact">Click here</a>!</div>
+        <h1 style="color:white;margin-left: 100px; margin-top: 100px;">Cool Title</h1>
+        <p style="color:white;margin-left: 100px;">Cool, catchy catchphrase that looks cool on a cat background</p>
+        <p style="margin-left: 100px;"><a class="btn btn-primary btn-lg" href="#" role="button">Learn more <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+    </div>
+
+    <div class="panel panel-primary" style="margin: 30px;">
+        <div class="panel-heading">
+            <h3 class="panel-title">Panels</h3>
+        </div>
+        <div class="panel-body">
+            This is a panel and a new component you should read up on yourself.
+        </div>
+    </div>
+
+    <div class="row" style="margin: 10px;">
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <!--Changed into div - won’t be a clickable link-->
+                <img src="cat.jpg">
+                <div class="caption">
+                    <h3>This is a cat.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in malesuada quam, ac interdum nisl. Aliquam sed ornare ligula. Quisque ultrices lobortis nisl sed congue. Suspendisse consequat libero at dapibus varius. Donec in libero quis nibh vestibulum molestie eu blandit lectus. Duis elementum vel elit at semper. Nullam varius at massa sed aliquam. Ut blandit dolor vitae sem consectetur, sit amet vestibulum ante lacinia. Pellentesque ac tellus placerat, consectetur mi non, condimentum justo. Suspendisse potenti. Cras malesuada justo rutrum, congue est vel, sollicitudin tortor. Maecenas non metus lectus. Aenean semper felis nec metus auctor dapibus.</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <!--Changed into div - won’t be a clickable link-->
+                <img src="cat.jpg">
+                <div class="caption">
+                    <h3>This is the same cat.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in malesuada quam, ac interdum nisl. Aliquam sed ornare ligula. Quisque ultrices lobortis nisl sed congue. Suspendisse consequat libero at dapibus varius. Donec in libero quis nibh vestibulum molestie eu blandit lectus. Duis elementum vel elit at semper. Nullam varius at massa sed aliquam. Ut blandit dolor vitae sem consectetur, sit amet vestibulum ante lacinia. Pellentesque ac tellus placerat, consectetur mi non, condimentum justo. Suspendisse potenti. Cras malesuada justo rutrum, congue est vel, sollicitudin tortor. Maecenas non metus lectus. Aenean semper felis nec metus auctor dapibus.</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <!--Changed into div - won’t be a clickable link-->
+                <img src="cat.jpg">
+                <div class="caption">
+                    <h3>This is another cat.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in malesuada quam, ac interdum nisl. Aliquam sed ornare ligula. Quisque ultrices lobortis nisl sed congue. Suspendisse consequat libero at dapibus varius. Donec in libero quis nibh vestibulum molestie eu blandit lectus. Duis elementum vel elit at semper. Nullam varius at massa sed aliquam. Ut blandit dolor vitae sem consectetur, sit amet vestibulum ante lacinia. Pellentesque ac tellus placerat, consectetur mi non, condimentum justo. Suspendisse potenti. Cras malesuada justo rutrum, congue est vel, sollicitudin tortor. Maecenas non metus lectus. Aenean semper felis nec metus auctor dapibus.</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-primary" style="margin: 30px;">
+        <div class="panel-heading">
+            <h3 class="panel-title">A quick tip</h3>
+        </div>
+        <div class="panel-body">
+            Aligning the media object to the right may be a little different than you think. You'll have to work a little with text alignment and such!
+        </div>
+    </div>
+
+    <div class="media" style="margin: 30px;">
+        <div class="media-left">
+            <a href="#">
+                <img class="media-object" src="cat.jpg" style="width: 256px;">
+            </a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">Impressive thing 1</h4>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in malesuada quam, ac interdum nisl. Aliquam sed ornare ligula. Quisque ultrices lobortis nisl sed congue. Suspendisse consequat libero at dapibus varius. Donec in libero quis nibh vestibulum molestie eu blandit lectus. Duis elementum vel elit at semper. Nullam varius at massa sed aliquam. Ut blandit dolor vitae sem consectetur, sit amet vestibulum ante lacinia. Pellentesque ac tellus placerat, consectetur mi non, condimentum justo. Suspendisse potenti. Cras malesuada justo rutrum, congue est vel, sollicitudin tortor. Maecenas non metus lectus. Aenean semper felis nec metus auctor dapibus.
+        </div>
+    </div>
+
+    <div class="media" style="margin: 30px;">
+        <div class="media-body media-right">
+            <h4 class="media-heading" style="text-align: right">Impressive thing 2</h4>
+            <p style="text-align: right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in malesuada quam, ac interdum nisl. Aliquam sed ornare ligula. Quisque ultrices lobortis nisl sed congue. Suspendisse consequat libero at dapibus varius. Donec in libero quis nibh vestibulum molestie eu blandit lectus. Duis elementum vel elit at semper. Nullam varius at massa sed aliquam. Ut blandit dolor vitae sem consectetur, sit amet vestibulum ante lacinia. Pellentesque ac tellus placerat, consectetur mi non, condimentum justo. Suspendisse potenti. Cras malesuada justo rutrum, congue est vel, sollicitudin tortor. Maecenas non metus lectus. Aenean semper felis nec metus auctor dapibus.</p>
+        </div>
+        <div class="media-right">
+            <a href="#">
+                <img class="media-object" src="cat.jpg" style="width: 256px;">
+            </a>
+        </div>
+    </div>
+
+    <div class="media" style="margin: 30px;">
+        <div class="media-left">
+            <a href="#">
+                <img class="media-object" src="cat.jpg" style="width: 256px;">
+            </a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">Impressive thing 3</h4>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in malesuada quam, ac interdum nisl. Aliquam sed ornare ligula. Quisque ultrices lobortis nisl sed congue. Suspendisse consequat libero at dapibus varius. Donec in libero quis nibh vestibulum molestie eu blandit lectus. Duis elementum vel elit at semper. Nullam varius at massa sed aliquam. Ut blandit dolor vitae sem consectetur, sit amet vestibulum ante lacinia. Pellentesque ac tellus placerat, consectetur mi non, condimentum justo. Suspendisse potenti. Cras malesuada justo rutrum, congue est vel, sollicitudin tortor. Maecenas non metus lectus. Aenean semper felis nec metus auctor dapibus.
+        </div>
+    </div>
+
+    <div class="panel panel-info" style="margin: 30px;" id="contact">
+        <div class="panel-heading">
+            <h3 class="panel-title">Contact us!</h3>
+        </div>
+        <div class="panel-body">
+            Fill out the form to contact us. Also, the cool styles are also from bootstrap components. Find out how you do them!
+        </div>
+    </div>
+
+    <div class="input-group input-group-lg" style="margin-left: 30px;margin-right: 30px; margin-bottom: 10px;">
+        <span class="input-group-addon" id="basic-addon1">Email</span>
+        <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group input-group-lg" style="margin-left: 30px;margin-right: 30px; margin-bottom: 10px;">
+        <span class="input-group-addon">
+        <input type="checkbox" aria-label="...">
+          Name (optional)
+      </span>
+        <input type="text" class="form-control" aria-label="...">
+    </div>
+    <div class="input-group input-group-lg" style="margin-left: 30px;margin-right: 30px; margin-bottom: 10px;">
+        <textarea rows="8" cols="50" class="form-control"></textarea>
+        <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Send!</button>
+      </span>
+    </div>
+
+    <div style="background-color: #286090; height: 300px; padding: 20px;">
+        <h1 style="color: white;">Hey look, some vanilla HTML/CSS!</h1>
+        <p style="color: white;">Never hurts to practice a little without frameworks.</p>
+        <hr>
+        <button type="button" class="btn btn-default">Random button</button>
+        <p style="margin-top: 30px; color: #6293bc;">(c) 2016-2017 Mindspark Summer Program (not really, just here to look cool)</p>
+    </div>
+
+
+
+
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

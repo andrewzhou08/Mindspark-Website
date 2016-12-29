@@ -1,0 +1,34 @@
+12:07:14 10/07/16 7141 [notice] Starting installation of module: base
+12:07:14 10/07/16 7141 [notice] owa_request Table Created.
+12:07:14 10/07/16 7141 [notice] owa_session Table Created.
+12:07:14 10/07/16 7141 [notice] owa_document Table Created.
+12:07:14 10/07/16 7141 [notice] owa_feed_request Table Created.
+12:07:14 10/07/16 7141 [notice] owa_click Table Created.
+12:07:14 10/07/16 7141 [notice] owa_ua Table Created.
+12:07:14 10/07/16 7141 [notice] owa_referer Table Created.
+12:07:14 10/07/16 7141 [notice] owa_site Table Created.
+12:07:14 10/07/16 7141 [notice] owa_visitor Table Created.
+12:07:14 10/07/16 7141 [notice] owa_host Table Created.
+12:07:14 10/07/16 7141 [notice] owa_exit Table Created.
+12:07:14 10/07/16 7141 [notice] owa_os Table Created.
+12:07:14 10/07/16 7141 [notice] owa_impression Table Created.
+12:07:14 10/07/16 7141 [notice] owa_configuration Table Created.
+12:07:14 10/07/16 7141 [notice] owa_user Table Created.
+12:07:14 10/07/16 7141 [notice] owa_domstream Table Created.
+12:07:14 10/07/16 7141 [notice] owa_action_fact Table Created.
+12:07:14 10/07/16 7141 [notice] owa_search_term_dim Table Created.
+12:07:14 10/07/16 7141 [notice] owa_ad_dim Table Created.
+12:07:14 10/07/16 7141 [notice] owa_source_dim Table Created.
+12:07:14 10/07/16 7141 [notice] owa_campaign_dim Table Created.
+12:07:14 10/07/16 7141 [notice] owa_location_dim Table Created.
+12:07:14 10/07/16 7141 [notice] owa_commerce_transaction_fact Table Created.
+12:07:14 10/07/16 7141 [notice] owa_commerce_line_item_fact Table Created.
+12:07:14 10/07/16 7141 [notice] owa_queue_item Table Created.
+12:07:14 10/07/16 7141 [notice] owa_site_user Table Created.
+12:07:14 10/07/16 7141 [notice] Post install proceadure was a success.
+12:07:14 10/07/16 7141 [notice] Module base activated
+12:07:14 10/07/16 7141 [notice] Installation complete.
+12:07:14 10/07/16 7141 [notice] Checking for existence of default site.
+12:07:14 10/07/16 7141 [notice] Created default site.
+12:07:14 10/07/16 7141 [notice] Install Complete Flag added to configuration
+12:11:31 10/07/16 9011 [notice] Configuration changes saved to database.
